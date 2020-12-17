@@ -10,7 +10,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Default Plugins
 Plugin 'tpope/vim-fugitive'
-" Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'wincent/command-t'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
@@ -49,6 +48,3 @@ nnoremap <C-H> <C-W><C-H>
 " Set more natural split behavior
 set splitbelow
 set splitright
-
-" Auto Open NERDTree
-autocmd vimenter * NERDTree
