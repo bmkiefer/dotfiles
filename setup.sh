@@ -11,6 +11,8 @@ fancy_echo() {
 
 # MOVE CONFIGURATION FILES
 
+fancy_echo "Moving Configuration Files..."
+
 # Move .vimrc to correct location on MacOS
 cp vim/vimrc ~/.vimrc
 
@@ -20,16 +22,18 @@ cp bash/bash_profile ~/.bash_profile
 # INSTALL DEPENDENCIES
 
 # Download git autocomplete executable
+fancy_echo "Installing Git Autocomplete..."
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
 # Download brew from github
-fancy_echo "Installing Homebrew ..."
+fancy_echo "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Fetch newest brew packages
 brew update --force
 
 # Install vim at newest version
+fancy_echo "Installing Vim..."
 brew install vim
 
 # Install Vundle
@@ -39,13 +43,17 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 # Install postgres at newest version
+fancy_echo "Installing Postgres..."
 brew install postgresql
 
 # Install redis at newest version
+fancy_echo "Installing Redis..."
 brew install redis
 
 # Install nvm
+fancy_echo "Installing NVM..."
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 
 # Install node globally at newest lts branch
+fancy_echo "Installing Node..."
 nvm install 'lts/*'
