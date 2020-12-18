@@ -17,8 +17,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'elzr/vim-json'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'joukevandermaas/vim-ember-hbs'
 Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
