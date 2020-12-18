@@ -27,7 +27,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 
 # Download brew from github
 fancy_echo "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Fetch newest brew packages
 brew update --force
