@@ -19,6 +19,9 @@ cp vim/vimrc ~/.vimrc
 # Move .bash_profile to correct location on MacOS
 cp bash/bash_profile ~/.bash_profile
 
+# Source bash_profile
+source ~/.bash_profile
+
 # INSTALL DEPENDENCIES
 
 # Download git autocomplete executable
