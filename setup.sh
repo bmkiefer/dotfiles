@@ -55,7 +55,7 @@ brew install redis
 
 # Install nvm
 fancy_echo "Installing NVM..."
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+brew install nvm
 
 # Install node globally at newest lts branch
 fancy_echo "Installing Node..."
