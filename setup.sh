@@ -60,3 +60,7 @@ brew install nvm
 # Install node globally at newest lts branch
 fancy_echo "Installing Node..."
 nvm install 'lts/*'
+
+# Install ack
+fancy_echo "Installing Ack..."
+brew install ack
