@@ -64,3 +64,7 @@ nvm install 'lts/*'
 # Install ack
 fancy_echo "Installing Ack..."
 brew install ack
+
+# Install tmux
+fancy_echo "Installing Tmux..."
+brew install tmux
