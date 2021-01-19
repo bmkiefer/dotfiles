@@ -1,0 +1,11 @@
+version: 2.1
+
+jobs:
+  build:
+    macos:
+      xcode: "12.3.0"
+
+  steps:
+    - checkout
+    - run: ./setup.sh 
+
