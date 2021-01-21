@@ -2,6 +2,6 @@
 
 ### Setup
 
-Run following command in your home directory
+Run following command in your home directory of you MacOS
 
 `./setup.sh`
