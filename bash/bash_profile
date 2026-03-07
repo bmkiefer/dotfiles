@@ -8,11 +8,29 @@ fi
 
 # Git branch in prompt.
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="[\[\033[32m\]\t\[\033[00m\]] \[\033[31m\]\u\[\033[00m\] [\[\033[36m\]\w\[\033[00m\]]\[\033[95m\]\$(parse_git_branch)\[\033[00m\] $ "
+# Customize PS1
+export PS1="[\[\033[32m\]\t\[\033[00m\]] \[\033[31m\]brandon\[\033[00m\] [\[\033[36m\]\w\[\033[00m\]]\[\033[95m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+# Add nvm to path
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+_nvmrc_hook() {
+  if [[ $PWD == $PREV_PWD ]]; then
+    return
+  fi
+
+  PREV_PWD=$PWD
+  [[ -f ".nvmrc" ]] && nvm use
+}
+
+if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
+  PROMPT_COMMAND="_nvmrc_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
+fi
+
+# Ignore the MacOS warning about bash
+export BASH_SILENCE_DEPRECATION_WARNING=1
