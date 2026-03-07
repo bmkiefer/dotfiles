@@ -1,5 +1,6 @@
 alias vi=nvim
 alias vim=nvim
+alias cdn="cd ~/.config/nvim"
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
