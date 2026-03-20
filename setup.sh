@@ -57,3 +57,9 @@ brew install lua
 
 # Install lua-language-server
 brew install lua-language-server
+
+# Install claude code on the command line
+brew install --cask claude-code
+
+# Install context7 MCP for documentation look ups
+claude mcp add --transport http context7 https://mcp.context7.com/mcp
