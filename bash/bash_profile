@@ -6,6 +6,9 @@ alias vim=nvim
 alias cdd="cd ~/code/dotfiles"
 alias cdn="cd ~/.config/nvim"
 
+# Command to copy and source new bash profile from this repo
+alias wbp="cp bash/bash_profile ~/.bash_profile && source ~/.bash_profile"
+
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
@@ -42,3 +45,8 @@ fi
 
 # Ignore the MacOS warning about bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Add pyenv to the path
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
