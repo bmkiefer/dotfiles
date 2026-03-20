@@ -66,3 +66,7 @@ claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
 # Install pyenv for managing python versions
 brew install pyenv
+
+# Install newest version of python and set it as the global version
+pyenv install 3.14.3
+pyenv global 3.14.3
