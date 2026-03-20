@@ -1,6 +1,9 @@
+# Add aliases for vi and vim to neovim
 alias vi=nvim
 alias vim=nvim
-alias cdd="cd ~/.config/nvim"
+
+# Add aliases for cd'ing to neovim config and dotfiles configuration
+alias cdd="cd ~/code/dotfiles"
 alias cdn="cd ~/.config/nvim"
 
 if [ -f ~/.git-completion.bash ]; then
