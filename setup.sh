@@ -51,3 +51,9 @@ nvm install 'lts/*'
 # Install tmux
 fancy_echo "Installing Tmux..."
 brew install tmux
+
+# Install lua
+brew install lua
+
+# Install lua-language-server
+brew install lua-language-server
