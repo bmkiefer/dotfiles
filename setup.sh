@@ -57,3 +57,19 @@ brew install lua
 
 # Install lua-language-server
 brew install lua-language-server
+
+# Install claude code on the command line
+brew install --cask claude-code
+
+# Install context7 MCP for documentation look ups
+claude mcp add --transport http context7 https://mcp.context7.com/mcp
+
+# Install pyenv for managing python versions
+brew install pyenv
+
+# Install newest version of python and set it as the global version
+pyenv install 3.14.3
+pyenv global 3.14.3
+
+# Install pyrefly
+pip install pyrefly
