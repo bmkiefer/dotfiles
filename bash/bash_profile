@@ -5,6 +5,7 @@ alias vim=nvim
 # Add aliases for cd'ing to neovim config and dotfiles configuration
 alias cdd="cd ~/code/dotfiles"
 alias cdn="cd ~/.config/nvim"
+alias cdc="cd ~/code"
 
 # Command to copy and source new bash profile from this repo
 alias wbp="cp bash/bash_profile ~/.bash_profile && source ~/.bash_profile"
