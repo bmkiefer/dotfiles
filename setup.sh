@@ -64,12 +64,15 @@ brew install --cask claude-code
 # Install context7 MCP for documentation look ups
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
-# Install pyenv for managing python versions
-brew install pyenv
+# Install uv for managing python versions
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-# Install newest version of python and set it as the global version
-pyenv install 3.14.3
-pyenv global 3.14.3
+# resource bash_profile after uv install
+source ~/.bash_profile
 
-# Install pyrefly
-pip install pyrefly
+# Install python version
+uv python install 3.10.17
+
+# Install pyrefly as a global utility
+uv tool install pyrefly
+
