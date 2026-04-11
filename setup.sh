@@ -76,3 +76,5 @@ uv python install 3.10.17
 # Install pyrefly as a global utility
 uv tool install pyrefly
 
+# Install ruff linter/formatter
+uv tool install ruff
