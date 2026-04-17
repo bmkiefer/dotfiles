@@ -5,7 +5,9 @@ jobs:
       xcode: 26.3.0
     resource_class: m4pro.medium
     steps:
-      - checkout
+      - run:
+          name: Checkout
+          command: git clone https://github.com/bmkiefer/dotfiles.git .
       - run:
           name: Run Setup Script
           command: ./setup.sh
