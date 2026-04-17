@@ -48,7 +48,9 @@ fi
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Add bin to path to allow uv usage
-. "$HOME/.local/bin/env"
+if [ -f "$HOME/.local/bin/env" ]; then
+  . "$HOME/.local/bin/env"
+fi
 
 # Source local private overrides if present
 if [ -f ~/.bash_profile_local ]; then

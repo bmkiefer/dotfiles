@@ -2,10 +2,28 @@ version: 2.1
 jobs:
   build:
     macos:
-      xcode: 12.3.0
+      xcode: 26.3.0
+    resource_class: m4pro.medium
     steps:
-      - checkout
+      - run:
+          name: Checkout
+          command: git clone https://github.com/bmkiefer/dotfiles.git .
       - run:
           name: Run Setup Script
           command: ./setup.sh
+      - run:
+          name: Verify Installed Tools
+          command: |
+            source ~/.bash_profile
+            command -v claude
+            command -v lua
+            command -v lua-language-server
+            command -v node
+            command -v npm
+            command -v nvm
+            command -v nvim
+            command -v pyrefly
+            command -v ruff
+            command -v tmux
+            command -v uv
 
