@@ -15,14 +15,15 @@ jobs:
           name: Verify Installed Tools
           command: |
             source ~/.bash_profile
-            command -v nvim
-            command -v nvm
-            command -v node
-            command -v tmux
+            command -v claude
             command -v lua
             command -v lua-language-server
-            command -v uv
-            command -v ruff
+            command -v node
+            command -v npm
+            command -v nvm
+            command -v nvim
             command -v pyrefly
-            command -v claude
+            command -v ruff
+            command -v tmux
+            command -v uv
 
