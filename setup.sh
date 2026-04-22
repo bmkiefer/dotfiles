@@ -61,6 +61,12 @@ brew install lua-language-server
 # Install claude code on the command line
 brew install --cask claude-code
 
+# Install terraform-lsp for neovim
+brew install hashicorp/tap/terraform-ls
+
+# Install typescript lsp for neovim
+npm install -g typescript-language-server typescript 
+
 # Install context7 MCP for documentation look ups
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
@@ -73,7 +79,7 @@ source ~/.bash_profile
 # Install python version
 uv python install 3.10.17
 
-# Install pyrefly as a global utility
+# Install pyrefly as a global utility for lsp
 uv tool install pyrefly
 
 # Install ruff linter/formatter
