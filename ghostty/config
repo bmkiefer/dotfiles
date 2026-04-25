@@ -1,0 +1,10 @@
+command = /bin/bash --login
+
+font-family = CodeNewRomanNFM
+font-size = 10
+
+theme = Catppuccin Mocha
+
+cursor-style-blink = false
+
+macos-option-as-alt = true
