@@ -11,12 +11,11 @@ alias cdc="cd ~/code"
 alias wbp="cp ~/code/dotfiles/bash/bash_profile ~/.bash_profile && source ~/.bash_profile"
 # Command to copy and source new ghostty config from this repo
 alias wgc="cp ~/code/dotfiles/ghostty/config ~/.config/ghostty/config"
+# Command to copy global CLAUDE.md from this repo
+alias wcl="cp ~/code/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md"
 
-# Shorten typing for claude
+# Shorten alias for claude
 alias c="claude"
-
-# Command to copy ghostty config from this repo
-alias wgc="cp ~/code/dotfiles/ghostty/config ~/.config/ghostty/config"
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash

@@ -13,7 +13,7 @@ Run from the home directory:
 ./setup.sh
 ```
 
-This installs: Homebrew, Neovim (with config from `bmkiefer/nvim-config`), NVM, Node.js LTS, Tmux, Lua, Lua Language Server, Claude Code CLI, and Python tooling (uv, pyrefly, ruff). It also copies `bash/bash_profile` to `~/.bash_profile` and configures the Context7 MCP server.
+This installs: Homebrew, Neovim (with config from `bmkiefer/nvim-config`), NVM, Node.js LTS, Tmux, Lua, Lua Language Server, Claude Code CLI, and Python tooling (uv, pyrefly, ruff). It also copies `bash/bash_profile` to `~/.bash_profile`, copies `claude/CLAUDE.md` to `~/.claude/CLAUDE.md`, and configures the Context7 MCP server.
 
 ## CI
 
@@ -22,8 +22,9 @@ CircleCI (`.circleci/config.yml`) validates `setup.sh` runs successfully on macO
 ## Architecture
 
 - `setup.sh` — single idempotent install script; checks for existing tools before installing
-- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`, `wbp` copies bash_profile, `wgc` copies Ghostty config), auto-switching Node versions via `.nvmrc`
+- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`, `wbp` copies bash_profile, `wgc` copies Ghostty config, `wcl` copies Claude config), auto-switching Node versions via `.nvmrc`
 - `ghostty/config` — Ghostty terminal config (Catppuccin Mocha theme, Code New Roman font, split border settings); copied to `~/.config/ghostty/config` by `setup.sh` or the `wgc` alias
+- `claude/CLAUDE.md` — global Claude Code configuration (communication style, GitHub interaction rules, code style preferences); copied to `~/.claude/CLAUDE.md` by `setup.sh` or the `wcl` alias
 
 ## Key Conventions
 

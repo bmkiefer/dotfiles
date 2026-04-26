@@ -24,6 +24,11 @@ fancy_echo "Copying Ghostty Configuration..."
 mkdir -p ~/.config/ghostty
 cp ghostty/config ~/.config/ghostty/config
 
+# Copy Claude CLAUDE.md
+fancy_echo "Copying Claude Configuration..."
+mkdir -p ~/.claude
+cp claude/CLAUDE.md ~/.claude/CLAUDE.md
+
 # INSTALL DEPENDENCIES
 
 # Download git autocomplete executable
