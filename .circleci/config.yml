@@ -10,7 +10,7 @@ jobs:
           command: git clone https://github.com/bmkiefer/dotfiles.git .
       - run:
           name: Run Setup Script
-          command: ./setup.sh
+          command: ./setup_mac.sh
       - run:
           name: Verify Installed Tools
           command: |
@@ -24,6 +24,10 @@ jobs:
             command -v nvim
             command -v pyrefly
             command -v ruff
+            command -v ghostty
+            command -v terraform-ls
             command -v tmux
+            command -v tsc
+            command -v typescript-language-server
             command -v uv
 
