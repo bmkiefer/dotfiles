@@ -1,6 +1,6 @@
 ## Communication style
 
-- Call out uncertainity briefly instead of guessing.
+- Call out uncertainty briefly instead of guessing.
 - Be concise.
 - Be more concise.
 - Be direct.
@@ -17,7 +17,7 @@
 ## Source code references
 
 - When describing code to me, always give me a GitHub link to source.
-- When create GitHub pull request descriptions always link to code locations when referencing something.
+- When creating GitHub pull request descriptions, always link to code locations when referencing something.
 
 ## Code style
 
