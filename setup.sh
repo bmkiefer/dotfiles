@@ -19,6 +19,11 @@ cp bash/bash_profile ~/.bash_profile
 # Source bash_profile
 source ~/.bash_profile
 
+# Copy Ghostty config
+fancy_echo "Copying Ghostty Configuration..."
+mkdir -p ~/.config/ghostty
+cp ghostty/config ~/.config/ghostty/config
+
 # INSTALL DEPENDENCIES
 
 # Download git autocomplete executable

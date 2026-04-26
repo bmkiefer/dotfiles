@@ -1,0 +1,17 @@
+command = /bin/bash --login
+
+font-family = CodeNewRomanNFM
+font-size = 10
+
+theme = Catppuccin Mocha
+
+cursor-style-blink = false
+
+macos-option-as-alt = true
+
+# Don't dim inactive panes
+unfocused-split-opacity = 1.0
+unfocused-split-fill = #1e1e2e
+
+# Catppuccin Mocha lavender for the split divider
+split-divider-color = #b4befe
