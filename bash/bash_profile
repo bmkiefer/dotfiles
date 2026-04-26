@@ -15,6 +15,9 @@ alias wgc="cp ~/code/dotfiles/ghostty/config ~/.config/ghostty/config"
 # Shorten typing for claude
 alias c="claude"
 
+# Command to copy ghostty config from this repo
+alias wgc="cp ~/code/dotfiles/ghostty/config ~/.config/ghostty/config"
+
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi

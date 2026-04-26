@@ -22,7 +22,8 @@ CircleCI (`.circleci/config.yml`) validates `setup.sh` runs successfully on macO
 ## Architecture
 
 - `setup.sh` — single idempotent install script; checks for existing tools before installing
-- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`), auto-switching Node versions via `.nvmrc`
+- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`, `wbp` copies bash_profile, `wgc` copies Ghostty config), auto-switching Node versions via `.nvmrc`
+- `ghostty/config` — Ghostty terminal config (Catppuccin Mocha theme, Code New Roman font, split border settings); copied to `~/.config/ghostty/config` by `setup.sh` or the `wgc` alias
 
 ## Key Conventions
 
