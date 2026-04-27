@@ -75,7 +75,7 @@ brew install --cask claude-code
 brew install hashicorp/tap/terraform-ls
 
 # Install typescript lsp for neovim
-npm install -g typescript-language-server typescript 
+npm install -g typescript-language-server typescript
 
 # Install code new roman nerd font
 brew install --cask font-code-new-roman-nerd-font 
