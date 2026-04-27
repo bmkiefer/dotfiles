@@ -54,6 +54,9 @@ git clone git@github.com:bmkiefer/nvim-config.git ~/.config/nvim
 fancy_echo "Installing NVM..."
 brew install nvm
 
+# Load nvm into the current shell
+source ~/.bash_profile
+
 # Install node globally at newest lts branch
 fancy_echo "Installing Node..."
 nvm install 'lts/*'

@@ -4,7 +4,6 @@ source ~/.bash_profile
 
 TOOLS=(
   claude
-  ghostty
   lua
   lua-language-server
   node
