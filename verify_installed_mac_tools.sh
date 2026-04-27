@@ -14,8 +14,6 @@ TOOLS=(
   ruff
   terraform-ls
   tmux
-  tsc
-  typescript-language-server
   uv
 )
 

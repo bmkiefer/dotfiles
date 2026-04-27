@@ -60,7 +60,6 @@ source ~/.bash_profile
 # Install node globally at newest lts branch
 fancy_echo "Installing Node..."
 nvm install 'lts/*'
-nvm alias default 'lts/*'
 
 # Install tmux
 fancy_echo "Installing Tmux..."
