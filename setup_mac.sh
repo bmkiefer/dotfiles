@@ -60,6 +60,7 @@ source ~/.bash_profile
 # Install node globally at newest lts branch
 fancy_echo "Installing Node..."
 nvm install 'lts/*'
+nvm alias default 'lts/*'
 
 # Install tmux
 fancy_echo "Installing Tmux..."
@@ -78,12 +79,7 @@ brew install --cask claude-code
 brew install hashicorp/tap/terraform-ls
 
 # Install typescript lsp for neovim
-echo "DEBUG: which npm -> $(which npm)"
-echo "DEBUG: npm prefix -> $(npm prefix -g)"
 npm install -g typescript-language-server typescript
-echo "DEBUG: which tsc -> $(which tsc)"
-echo "DEBUG: which typescript-language-server -> $(which typescript-language-server)"
-echo "DEBUG: ls npm bin -> $(ls $(npm prefix -g)/bin/)"
 
 # Install code new roman nerd font
 brew install --cask font-code-new-roman-nerd-font 
