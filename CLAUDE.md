@@ -30,3 +30,4 @@ CircleCI (`.circleci/config.yml`) validates `setup_mac.sh` runs successfully on 
 
 - Neovim config lives in a separate repo (`bmkiefer/nvim-config`) cloned to `~/.config/nvim`; changes to editor config go there, not here
 - `setup_mac.sh` is designed to be re-runnable; use conditional checks (`if ! command -v ...`) when adding new installs
+- When adding a new tool to `setup_mac.sh`, also add it to the `TOOLS` array in `verify_installed_mac_tools.sh` so CI verifies it
