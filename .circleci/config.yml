@@ -11,7 +11,5 @@ jobs:
           command: ./setup_mac.sh
       - run:
           name: Verify Installed Tools
-          command: |
-            source ~/.bash_profile
-            ./verify_installed_mac_tools.sh
+          command: ./verify_installed_mac_tools.sh
 
