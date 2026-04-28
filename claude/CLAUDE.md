@@ -26,3 +26,5 @@
 - Never create boolean conditions that have more than 2 terms. Abstract these out in a variable and use that to branch.
 - Never nest functions inside of our functions. That is difficult to resaon about and it makes the inner function impossible to test.
 - Never use magic numbers or strings. Always create constants that can be reused to make the code cleaner.
+- Always type your parameters and return types when using a typed language or a typed variant of a language.
+- When using typing, do not use the `any` type unless you have no other option. Call this out when you do.
