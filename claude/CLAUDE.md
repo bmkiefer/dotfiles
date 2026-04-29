@@ -35,4 +35,4 @@
 
 #### Tests
 
-- All shared test helpers should go at the bottom of the file. Optimize for the test files being the things that are shown first.
+- All shared test helpers should go at the bottom of the file. Optimize for the tests being the things that are shown first.
