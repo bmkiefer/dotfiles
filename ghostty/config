@@ -15,3 +15,5 @@ unfocused-split-fill = #1e1e2e
 
 # Catppuccin Mocha lavender for the split divider
 split-divider-color = #b4befe
+
+keybind = super+i=new_split:left
