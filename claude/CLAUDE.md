@@ -27,4 +27,12 @@
 - Never nest functions inside of our functions. That is difficult to resaon about and it makes the inner function impossible to test.
 - Never use magic numbers or strings. Always create constants that can be reused to make the code cleaner.
 - Always type your parameters and return types when using a typed language or a typed variant of a language.
-- When using typing, do not use the `any` type unless you have no other option. Call this out when you do.
+- When using typing, do not use the any type unless you have no other option. Call out when you use any.
+- File level constants should always be below the imports and never littered within the file.
+- Never add lint ignores when creating new code. If you have no other choice, add a NOTE comment to explaining why it is necessary.
+- Do not use break or continue mechanisms when looping. Always find a way to have a consistent control flow.
+- Never create functions with multiple return statements. Centralize returns to a single statement to make control flow cleaner.
+
+#### Tests
+
+- All shared test helpers should go at the bottom of the file. Optimize for the tests being the things that are shown first.
