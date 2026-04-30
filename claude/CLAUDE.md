@@ -33,6 +33,7 @@
 - Do not use break or continue mechanisms when looping. Always find a way to have a consistent control flow.
 - Never create functions with multiple return statements. Centralize returns to a single statement to make control flow cleaner.
 - Prefer eliminating special-case branches over handling them. When a conditional looks necessary, ask whether restructuring the data or logic could remove it entirely.
+- When I ask you to add a comment, use the format `NOTE(bmkiefer MM-DD-YYYY): <message>` or `TODO(bmkiefer MM-DD-YYYY): <message>`, with the comment prefix appropriate to the language (e.g. `#` for Python/shell, `//` for JavaScript/TypeScript/Go/Rust). Use today's date.
 
 #### Tests
 
