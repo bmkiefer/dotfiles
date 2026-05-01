@@ -13,6 +13,7 @@
 - Use the style of why, what, how for pull request descriptions. I don't want why, what, and how as bullets or headers though. Draft your descriptions around this idea.
 - Never update descriptions of PRs that I do not own. It is not appropriate to do that.
 - Do not add generated with Claude Code to the pull request descriptions. It is noisy.
+- When we start going through feedback from reviewers on my Pull requests, always output text in the format of raw comment text, any of your commentary and the currently draft response.
 
 ## Source code references
 
@@ -37,4 +38,5 @@
 
 #### Tests
 
+- Do not mock any seams that aren't explicitly called out. Centralized mock classes should be used if they are necessary.
 - All shared test helpers should go at the bottom of the file. Optimize for the tests being the things that are shown first.
