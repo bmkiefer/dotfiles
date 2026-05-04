@@ -28,6 +28,8 @@ cp ghostty/config ~/.config/ghostty/config
 fancy_echo "Copying Claude Configuration..."
 mkdir -p ~/.claude
 cp claude/CLAUDE.md ~/.claude/CLAUDE.md
+cp claude/settings.json ~/.claude/settings.json
+cp -p claude/statusline.sh ~/.claude/statusline.sh
 
 # INSTALL DEPENDENCIES
 
@@ -82,6 +84,9 @@ brew install --cask font-code-new-roman-nerd-font
 
 # Install ghostty terminal
 brew install --cask ghostty
+
+# Install jq for claude status line
+brew install jq
 
 # Install context7 MCP for documentation look ups
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
