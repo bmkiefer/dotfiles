@@ -25,6 +25,23 @@ TOTAL_TOKENS=200000
 THRESHOLD_WARN=50
 THRESHOLD_CRIT=75
 
+resolve_transcript() {
+    local payload="$1"
+    local reported
+    reported=$(echo "$payload" | jq -r '.transcript_path // ""')
+    local resolved=""
+    if [[ -n "$reported" && -f "$reported" ]]; then
+        resolved="$reported"
+    else
+        local session_id
+        session_id=$(basename "$reported" .jsonl 2>/dev/null)
+        if [[ -n "$session_id" ]]; then
+            resolved=$(ls -t "$HOME/.claude/projects/"*/"${session_id}.jsonl" 2>/dev/null | head -n 1)
+        fi
+    fi
+    echo "$resolved"
+}
+
 get_used_tokens() {
     local transcript="$1"
     local tokens=0
@@ -71,7 +88,7 @@ format_tokens() {
 }
 
 model=$(echo "$input" | jq -r '.model.display_name // "unknown"')
-transcript=$(echo "$input" | jq -r '.transcript_path // ""')
+transcript=$(resolve_transcript "$input")
 current_dir=$(echo "$input" | jq -r '.workspace.current_dir // "."')
 dir_name="${current_dir/#$HOME/~}"
 git_branch=$(git -C "$current_dir" branch --no-color 2>/dev/null | grep '^*' | sed 's/* //')
