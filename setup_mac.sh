@@ -28,6 +28,8 @@ cp ghostty/config ~/.config/ghostty/config
 fancy_echo "Copying Claude Configuration..."
 mkdir -p ~/.claude
 cp claude/CLAUDE.md ~/.claude/CLAUDE.md
+cp claude/settings.json ~/.claude/settings.json
+cp -p claude/statusline.sh ~/.claude/statusline.sh
 
 # INSTALL DEPENDENCIES
 
