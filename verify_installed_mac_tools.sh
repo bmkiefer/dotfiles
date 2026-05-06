@@ -8,8 +8,9 @@ TOOLS=(
   lua-language-server
   node
   npm
-  nvm
   nvim
+  nvm
+  obsidian
   pyrefly
   ruff
   terraform-ls
