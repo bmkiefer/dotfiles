@@ -88,6 +88,9 @@ brew install --cask ghostty
 # Install jq for claude status line
 brew install jq
 
+# Install htop for process monitoring
+brew install htop
+
 # Install context7 MCP for documentation look ups
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
