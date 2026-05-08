@@ -91,6 +91,9 @@ brew install jq
 # Install htop for process monitoring
 brew install htop
 
+# Install Obsidian for note taking
+brew install --cask obsidian
+
 # Install context7 MCP for documentation look ups
 claude mcp add --transport http context7 https://mcp.context7.com/mcp
 
