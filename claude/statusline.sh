@@ -111,4 +111,4 @@ else
     branch_part=""
 fi
 
-printf "%s %s %s %s %s%s\n" "$model_part" "$sep" "$ctx_part" "$sep" "$dir_part" "$branch_part"
+printf "%s %s %s\n%s%s\n" "$model_part" "$sep" "$ctx_part" "$dir_part" "$branch_part"
