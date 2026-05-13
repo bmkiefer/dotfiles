@@ -38,8 +38,12 @@ fancy_echo "Downloading Git Autocomplete Package..."
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
 # Download and install Homebrew from GitHub
-fancy_echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew >/dev/null 2>&1; then
+  fancy_echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  fancy_echo "Homebrew already installed, skipping..."
+fi
 
 fancy_echo "Updating Homebrew Packages..."
 brew update --force
@@ -49,8 +53,12 @@ fancy_echo "Installing Neovim..."
 brew install neovim
 
 # Install neovim at newest version
-fancy_echo "Downloading Neovim Config..."
-git clone git@github.com:bmkiefer/nvim-config.git ~/.config/nvim
+if [ ! -d ~/.config/nvim ]; then
+  fancy_echo "Downloading Neovim Config..."
+  git clone git@github.com:bmkiefer/nvim-config.git ~/.config/nvim
+else
+  fancy_echo "Neovim config already cloned, skipping..."
+fi
 
 # Install nvm
 fancy_echo "Installing NVM..."
@@ -95,10 +103,20 @@ brew install htop
 brew install --cask obsidian
 
 # Install context7 MCP for documentation look ups
-claude mcp add --transport http context7 https://mcp.context7.com/mcp
+if ! claude mcp list 2>/dev/null | grep -q '^context7'; then
+  fancy_echo "Adding context7 MCP server..."
+  claude mcp add --transport http context7 https://mcp.context7.com/mcp
+else
+  fancy_echo "context7 MCP already configured, skipping..."
+fi
 
 # Install uv for managing python versions
-curl -LsSf https://astral.sh/uv/install.sh | sh
+if ! command -v uv >/dev/null 2>&1; then
+  fancy_echo "Installing uv..."
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+else
+  fancy_echo "uv already installed, skipping..."
+fi
 
 # resource bash_profile after uv install
 source ~/.bash_profile

@@ -10,6 +10,9 @@ jobs:
           name: Run Setup Script
           command: ./setup_mac.sh
       - run:
+          name: Re-run Setup Script (verify idempotency)
+          command: ./setup_mac.sh
+      - run:
           name: Verify Installed Tools
           command: ./verify_installed_mac_tools.sh
 
