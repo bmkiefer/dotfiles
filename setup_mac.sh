@@ -102,6 +102,9 @@ brew install htop
 # Install Obsidian for note taking
 brew install --cask obsidian
 
+# Install OrbStack for containers and VMs
+brew install orbstack
+
 # Install context7 MCP for documentation look ups
 if ! claude mcp list 2>/dev/null | grep -q '^context7'; then
   fancy_echo "Adding context7 MCP server..."
