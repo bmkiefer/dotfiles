@@ -54,11 +54,6 @@ fi
 # Ignore the MacOS warning about bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Add bin to path to allow uv usage
-if [ -f "$HOME/.local/bin/env" ]; then
-  . "$HOME/.local/bin/env"
-fi
-
 # Source local private overrides if present
 if [ -f ~/.bash_profile_local ]; then
   . ~/.bash_profile_local
