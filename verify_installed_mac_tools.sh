@@ -15,7 +15,6 @@ TOOLS=(
   ruff
   terraform-ls
   tmux
-  uv
 )
 
 FAILED=0
