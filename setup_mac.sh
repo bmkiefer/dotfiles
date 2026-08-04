@@ -116,22 +116,3 @@ else
   fancy_echo "context7 MCP already configured, skipping..."
 fi
 
-# Install uv for managing python versions
-if ! command -v uv >/dev/null 2>&1; then
-  fancy_echo "Installing uv..."
-  curl -LsSf https://astral.sh/uv/install.sh | sh
-else
-  fancy_echo "uv already installed, skipping..."
-fi
-
-# resource bash_profile after uv install
-source ~/.bash_profile
-
-# Install python version
-uv python install 3.10.17
-
-# Install pyrefly as a global utility for lsp
-uv tool install pyrefly
-
-# Install ruff linter/formatter
-uv tool install ruff
