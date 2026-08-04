@@ -99,6 +99,9 @@ brew install jq
 # Install htop for process monitoring
 brew install htop
 
+# Install hunk for local diffs
+brew install hunk
+
 # Install Obsidian for note taking
 brew install --cask obsidian
 
