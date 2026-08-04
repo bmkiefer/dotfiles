@@ -11,8 +11,6 @@ TOOLS=(
   npm
   nvm
   nvim
-  pyrefly
-  ruff
   terraform-ls
   tmux
 )
