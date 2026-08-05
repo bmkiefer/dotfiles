@@ -102,6 +102,9 @@ brew install htop
 # Install hunk for local diffs
 brew install hunk
 
+# Install GitHub CLI for pull request and issue management
+brew install gh
+
 # Install Obsidian for note taking
 brew install --cask obsidian
 

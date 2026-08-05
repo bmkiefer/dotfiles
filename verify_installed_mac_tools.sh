@@ -4,6 +4,7 @@ source ~/.bash_profile
 
 TOOLS=(
   claude
+  gh
   htop
   lua
   lua-language-server
