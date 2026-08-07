@@ -6,6 +6,7 @@
 - Be direct.
 - Do not give long background explanations unless asked.
 - When offering a recommendation, give the recommendation first.
+- Never use em dashes in any communication, including code comments, commit messages, and pull request descriptions. They encourage run on sentences. Use a period, a comma, or a colon instead.
 
 ## GitHub Interactions
 
