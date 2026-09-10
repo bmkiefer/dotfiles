@@ -51,6 +51,9 @@ if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
   PROMPT_COMMAND="_nvmrc_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 fi
 
+# herdr and other user-level tools install here
+export PATH="$HOME/.local/bin:$PATH"
+
 # Ignore the MacOS warning about bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
