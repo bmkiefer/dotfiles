@@ -51,7 +51,9 @@ if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
   PROMPT_COMMAND="_nvmrc_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 fi
 
-# herdr and other user-level tools install here
+# NOTE(bmkiefer 09-10-2026): herdr installs its binary to ~/.local/bin, which bash
+# does not put on PATH by default. Prepended so user-level installs win over
+# Homebrew copies of the same tool.
 export PATH="$HOME/.local/bin:$PATH"
 
 # Ignore the MacOS warning about bash
