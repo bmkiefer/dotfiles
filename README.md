@@ -19,5 +19,5 @@ Run from your home directory for MacOS:
 - **Node:** NVM, Node.js LTS, TypeScript LSP
 - **Lua:** Lua, Lua Language Server
 - **Infrastructure:** Terraform LSP
-- **AI Tooling:** Claude Code CLI, Context7 MCP server
+- **AI Tooling:** Claude Code CLI, Context7 MCP server, herdr agent multiplexer
 - **Terminal Multiplexer:** Tmux
