@@ -51,6 +51,12 @@ if ! [[ "${PROMPT_COMMAND:-}" =~ _nvmrc_hook ]]; then
   PROMPT_COMMAND="_nvmrc_hook${PROMPT_COMMAND:+;$PROMPT_COMMAND}"
 fi
 
+# NOTE(bmkiefer 09-10-2026): self-updating tools drop binaries in ~/.local/bin,
+# which bash does not put on PATH by default. Claude Code's native updater and
+# herdr's standalone installer both land here. Prepended so a self-updated copy
+# wins over an older Homebrew one.
+export PATH="$HOME/.local/bin:$PATH"
+
 # Ignore the MacOS warning about bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
 

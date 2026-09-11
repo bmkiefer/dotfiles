@@ -81,6 +81,9 @@ brew install lua-language-server
 # Install claude code on the command line
 brew install --cask claude-code
 
+# Install herdr for managing terminal workspaces for AI agents
+brew install herdr
+
 # Install terraform-lsp for neovim
 brew install hashicorp/tap/terraform-ls
 
