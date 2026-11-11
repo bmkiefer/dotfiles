@@ -22,8 +22,9 @@ CircleCI (`.circleci/config.yml`) validates `setup_mac.sh` runs successfully on 
 ## Architecture
 
 - `setup_mac.sh` — single idempotent install script; checks for existing tools before installing
-- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`, `wbp` copies bash_profile, `wgc` copies Ghostty config, `wcl` copies Claude config), auto-switching Node versions via `.nvmrc`
+- `bash/bash_profile` — shell config: NVM init, git branch in prompt, aliases (`vi`/`vim` → `nvim`, `cdd` → `~/code/dotfiles`, `cdn` → `~/.config/nvim`, `wbp` copies bash_profile, `wgc` copies Ghostty config, `whc` copies herdr config and reloads it, `wcl` copies Claude config), auto-switching Node versions via `.nvmrc`
 - `ghostty/config` — Ghostty terminal config (Catppuccin Mocha theme, Code New Roman font, split border settings); copied to `~/.config/ghostty/config` by `setup_mac.sh` or the `wgc` alias
+- `herdr/config.toml` — herdr config (bash as the default pane shell); copied to `~/.config/herdr/config.toml` by `setup_mac.sh` or the `whc` alias
 - `claude/CLAUDE.md` — global Claude Code configuration (communication style, GitHub interaction rules, code style preferences); copied to `~/.claude/CLAUDE.md` by `setup_mac.sh` or the `wcl` alias
 
 ## Key Conventions

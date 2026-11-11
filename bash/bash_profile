@@ -11,6 +11,8 @@ alias cdc="cd ~/code"
 alias wbp="cp ~/code/dotfiles/bash/bash_profile ~/.bash_profile && source ~/.bash_profile"
 # Command to copy and source new ghostty config from this repo
 alias wgc="cp ~/code/dotfiles/ghostty/config ~/.config/ghostty/config"
+# Command to copy herdr config from this repo and reload it in the running server
+alias whc="mkdir -p ~/.config/herdr && cp ~/code/dotfiles/herdr/config.toml ~/.config/herdr/config.toml && herdr server reload-config"
 # Command to copy global Claude config from this repo
 alias wcl="cp ~/code/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md && cp ~/code/dotfiles/claude/settings.json ~/.claude/settings.json && cp -p ~/code/dotfiles/claude/statusline.sh ~/.claude/statusline.sh"
 
