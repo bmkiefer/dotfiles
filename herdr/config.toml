@@ -1,0 +1,9 @@
+onboarding = false
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[terminal]
+# Use bash for new panes instead of $SHELL (zsh on macOS). With the default
+# shell_mode of "auto", macOS starts it as a login shell so ~/.bash_profile loads.
+default_shell = "/bin/bash"

@@ -24,6 +24,11 @@ fancy_echo "Copying Ghostty Configuration..."
 mkdir -p ~/.config/ghostty
 cp ghostty/config ~/.config/ghostty/config
 
+# Copy herdr config
+fancy_echo "Copying herdr Configuration..."
+mkdir -p ~/.config/herdr
+cp herdr/config.toml ~/.config/herdr/config.toml
+
 # Copy Claude CLAUDE.md
 fancy_echo "Copying Claude Configuration..."
 mkdir -p ~/.claude
