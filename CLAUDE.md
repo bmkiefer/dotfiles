@@ -17,7 +17,7 @@ This installs: Homebrew, Neovim (with config from `bmkiefer/nvim-config`), NVM, 
 
 ## CI
 
-CircleCI (`.circleci/config.yml`) validates `setup_mac.sh` runs successfully on macOS (Xcode 26.3.0, `m4pro.medium`). The pipeline clones the repo via HTTPS (public repo, no SSH key needed), runs `setup_mac.sh`, then verifies all tools are on `PATH` using `command -v`.
+CircleCI (`.circleci/config.yml`) validates `setup_mac.sh` runs successfully on macOS (Xcode 27.2.0, `m4pro.medium`). The pipeline clones the repo via HTTPS (public repo, no SSH key needed), runs `setup_mac.sh`, then verifies all tools are on `PATH` using `command -v`.
 
 ## Architecture
 

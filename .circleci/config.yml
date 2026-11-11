@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     macos:
-      xcode: 26.3.0
+      xcode: 27.2.0
     resource_class: m4pro.medium
     steps:
       - checkout
