@@ -1,0 +1,21 @@
+.circleci/config.yml
+  s_b5743f009fffef::t_f1eea6f5f11746 5
+CLAUDE.md
+  s_b5743f009fffef::t_6d35b911a21b1e 20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5b9b5b614eb56790e0d6c81307ece36ebde2a824",
+  "prompts": {},
+  "sessions": {
+    "s_b5743f009fffef": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d99513c-875c-40c1-a72c-750c34901122",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Brandon Kiefer <brandon.kiefer@front.com>"
+    }
+  }
+}
